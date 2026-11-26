@@ -1,14 +1,18 @@
 # 🚉 KRL Schedule Processing
 
 [![Python](https://img.shields.io/badge/python-3.11%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![Source](https://img.shields.io/badge/source-GAPEKA%202026-D9232E?style=flat-square)](https://www.kci.id/layanan/info-pelanggan/jadwalcommuterline-gapeka2026)
-[![Output](https://img.shields.io/badge/output-JSON%20%26%20SQLite-003B57?style=flat-square)](#quickstart)
+[![Source](https://img.shields.io/badge/source-GAPEKA_2026-D9232E?style=flat-square)](https://www.kci.id/layanan/info-pelanggan/jadwalcommuterline-gapeka2026)
+[![Output](https://img.shields.io/badge/output-JSON_%2B_SQLite-003B57?style=flat-square)](#quickstart)
 [![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)](LICENSE)
 
 A Python CLI and data pipeline that converts official Indonesian **KRL Commuter Line (GAPEKA)** timetable PDFs (or fallback CSVs) into validated, structured **JSON** and queryable **SQLite** datasets.
 
-<img src="assets/krl-from-inka.jpeg" height="180" style="display:inline-block;"/>
-<img src="assets/cikarang-schedule-preview.png" height="180" style="display:inline-block;"/>
+<table>
+  <tr>
+    <td width="41%"><img src="assets/krl-from-inka.jpeg" width="100%" alt="KRL Commuter Line train" /></td>
+    <td width="59%"><img src="assets/cikarang-schedule-preview.png" width="100%" alt="Cikarang GAPEKA schedule preview" /></td>
+  </tr>
+</table>
 
 ### Download the Official GAPEKA PDF
 
