@@ -1,0 +1,41 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "krl-schedule-processing"
+version = "1.0.0"
+description = "Parse official KAI Commuter GAPEKA timetable PDFs and CSVs into validated JSON and SQLite datasets."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+dependencies = [
+    "pdfplumber>=0.11.4",
+    "pydantic>=2.9.0",
+    "rich>=13.9.0",
+    "typer>=0.12.5",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0",
+    "ruff>=0.7.0",
+]
+
+[project.scripts]
+krl-schedule = "krl_schedule.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/krl_schedule"]
+
+[tool.ruff]
+# Match the vertical-stacking readability target across code and comments.
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM"]
+
+[tool.pytest.ini_options]
+# Keep tests deterministic using committed synthetic fixtures without requiring GAPEKA PDFs.
+testpaths = ["tests"]
